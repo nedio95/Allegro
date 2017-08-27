@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{76F19313-C19F-48D3-B91B-639382F6BE5D}</ProjectGuid>
+    <RootNamespace>NGochevDefaultAllegroProject</RootNamespace>
+    <ProjectName />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>..\allegro\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\allegro\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>..\allegro\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\allegro\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>allegro-5.0.10-monolith-md-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>allegro-5.0.10-monolith-md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Level_Strategy.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Manager_Actions.cpp" />
+    <ClCompile Include="Manager_Display.cpp" />
+    <ClCompile Include="Manager_HUD.cpp" />
+    <ClCompile Include="Manager_PlayerUnits.cpp" />
+    <ClCompile Include="Manager_Time.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SpecialShittyUIObject.cpp" />
+    <ClCompile Include="StaticObject.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="UIObject.cpp" />
+    <ClCompile Include="Unit.cpp" />
+    <ClCompile Include="UnitA.cpp" />
+    <ClCompile Include="UnitAInfantry.cpp" />
+    <ClCompile Include="UnitH.cpp" />
+    <ClCompile Include="UnitHInfantry.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="HUDObject.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Level_Strategy.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Manager_Actions.h" />
+    <ClInclude Include="Manager_Display.h" />
+    <ClInclude Include="Manager_HUD.h" />
+    <ClInclude Include="Manager_PlayerUnits.h" />
+    <ClInclude Include="Manager_Time.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SpecialShittyUIObject.h" />
+    <ClInclude Include="StaticObject.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="UIObject.h" />
+    <ClInclude Include="Unit.h" />
+    <ClInclude Include="UnitA.h" />
+    <ClInclude Include="UnitAInfantry.h" />
+    <ClInclude Include="UnitH.h" />
+    <ClInclude Include="UnitHInfantry.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
